@@ -34,12 +34,12 @@ Dependencies and versions
 
 First, check the [dependencies](#dependenciesandenvironment) process
 
-Ensure you have a `.env` file with the environment variable **X**.
+Ensure you have a `.env` file with the environment variable **API_KEY** for the respective LLM.
 
-Going to _root_ folder and exec:
+to gemini exec:
 
 ```
-$ python3 main.py
+$ python3 gemini.py -i PATH_TO_ARTICLE
 ```
 
 <div id="author"></div>
