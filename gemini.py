@@ -1,4 +1,3 @@
-from dotenv import load_dotenv
 import datetime
 from google import genai
 from google.genai import types
@@ -6,8 +5,6 @@ import pathlib
 
 from common.args import get_input_from_args
 from common.env import get_api_key
-
-load_dotenv()
 
 input_file = get_input_from_args()
 api_key = get_api_key()
