@@ -14,6 +14,8 @@
 
 ☕ [Using](#using)
 
+⚙️ [Install](#install)
+
 👷 [Author](#author)
 
 <!--te-->
@@ -28,18 +30,34 @@ Dependencies and versions
 
 - Python 3.10.12
 
+<div id="install"></div>
+
+## ⚙️ **Install**
+
+We use venv, to install all dependencies of all llms providers, exec
+
+```
+$ make install
+```
+
 <div id="using"></div>
 
 ## ☕ **Using**
 
-First, check the [dependencies](#dependenciesandenvironment) process
+First, check the [dependencies](#dependenciesandenvironment) and [install](#install) process
 
 Ensure you have a `.env` file with the environment variable **API_KEY** for the respective LLM.
 
 to gemini exec:
 
 ```
-$ python3 gemini.py -i PATH_TO_ARTICLE
+$ make run-gemini INPUT=YOUR_INPUT_PATH
+```
+
+You can clean the environment using
+
+```
+$ make clean
 ```
 
 <div id="author"></div>
