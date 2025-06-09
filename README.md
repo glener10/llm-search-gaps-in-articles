@@ -28,6 +28,10 @@ Dependencies and versions
 
 - Python 3.10.12
 
+**Gemini**: This project uses the paid Google Gemini API, it's necessary to configure a valid Gemini API Key. Ensure you have a `.env` file with the environment variable **API_KEY**.
+
+**Deepseek, local processing**: The project can use the Deepseek model for local processing, which requires the installation and configuration of [Ollama](https://ollama.com/download)
+
 <div id="using"></div>
 
 ## ☕ **Using**
@@ -42,12 +46,18 @@ $ make clean
 
 ### Gemini
 
-Ensure you have a `.env` file with the environment variable **API_KEY**.
-
 to gemini exec:
 
 ```
 $ make run-gemini INPUT=YOUR_INPUT_PATH
+```
+
+### DeepSeek
+
+to deepseek exec:
+
+```
+$ make run-deep INPUT=YOUR_INPUT_PATH
 ```
 
 <div id="author"></div>
