@@ -4,7 +4,7 @@ from google.genai import types
 import pathlib
 
 from common.args import get_input_from_args
-from common.env import get_api_key
+from usecases.env import get_api_key
 
 input_file = get_input_from_args()
 api_key = get_api_key()

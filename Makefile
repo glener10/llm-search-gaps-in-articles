@@ -1,6 +1,6 @@
 SHELL := /bin/bash
 
-.PHONY: install run-gemini run-deep clean
+.PHONY: run-gemini run-deep clean
 
 run-gemini:
 	@echo "Checking for 'venv-gemini' virtual environment..."
@@ -35,5 +35,6 @@ run-deep:
 clean:
 	@echo "Removing virtual environment and temporary files..."
 	rm -rf venv-gemini
+	rm -rf venv-deep
 	find . -name "__pycache__" -exec rm -rf {} +
 	find . -name "*.pyc" -exec rm -f {} +
