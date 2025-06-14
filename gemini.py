@@ -23,6 +23,8 @@ def main():
   filepath = pathlib.Path(args.input)
   model = args.model or DEFAULT_MODEL
   
+  print(f"📄 processing file: {filepath} with model: {model} output path: {args.output}")
+  
   prompt_path = pathlib.Path("prompt.txt")
   if not prompt_path.exists():
     raise FileNotFoundError("❌ prompt.txt not found")
@@ -38,10 +40,10 @@ def main():
         ),
         prompt])
   
-  gaps_path = pathlib.Path("gaps.txt")
+  gaps_path = pathlib.Path(args.output)
   gaps_path.touch(exist_ok=True)
   with gaps_path.open("a", encoding="utf-8") as f:
-    f.write(f"file {args.input} | {model}\n {response.text.strip()} \n\n")
+    f.write(f"file {args.input} | {model}\n\n{response.text.strip()}\n--------------------------------------------------------------------------\n\n\n")
   print(f"✅ gaps saved to {gaps_path}")
 
 if __name__ == "__main__":
