@@ -11,7 +11,7 @@ Respond briefly, ordering by the most relevant gap above. Be specific and use ex
 If you do not find content about the described search points, do not send anything or try to fill in.
 
 Do not send an introductory text such as "Ok, here are the gaps and points to be improved identified in the provided text" or "Ok, here are the gaps", send only the answer.
-Do not use '*' to bold text or to start bullets, do not break lines between the points you find.
+Do not use '*' to bold text or to start bullets, do not break lines between the answers.
 
 The answer must be ONLY the content in the format below:
 
