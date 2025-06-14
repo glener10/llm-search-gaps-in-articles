@@ -40,6 +40,8 @@ First, check the [dependencies](#dependenciesandenvironment) process
 
 Feel free to change the prompt as you see fit in [`prompt.txt`](./prompt.txt)
 
+You also can create scripts to exec N models for N inputs and generate N output files, like in [`exec_many.sh`](./exec_many.sh)
+
 You can clean the environment using
 
 ```
@@ -49,6 +51,8 @@ $ make clean
 Optional parameters
 
 **-m**: pass the llm model
+
+**-o**: output path
 
 ### Gemini
 
