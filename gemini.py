@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 
 from common.args import get_input_from_args
 
-MODEL = "gemini-2.0-flash"
+DEFAULT_MODEL = "gemini-2.0-flash"
 
 def get_api_key():
   load_dotenv()
@@ -17,20 +17,20 @@ def get_api_key():
   return api_key
 
 def main():
-  input_file = get_input_from_args()
+  args = get_input_from_args()
   api_key = get_api_key()
 
-  filepath = pathlib.Path(input_file)
-
-  client = genai.Client(api_key=api_key)
+  filepath = pathlib.Path(args.input)
+  model = args.model or DEFAULT_MODEL
   
   prompt_path = pathlib.Path("prompt.txt")
   if not prompt_path.exists():
     raise FileNotFoundError("❌ prompt.txt not found")
   prompt = prompt_path.read_text(encoding="utf-8").strip()
 
+  client = genai.Client(api_key=api_key)
   response = client.models.generate_content(
-    model=MODEL,
+    model=model,
     contents=[
         types.Part.from_bytes(
           data=filepath.read_bytes(),
@@ -41,7 +41,7 @@ def main():
   gaps_path = pathlib.Path("gaps.txt")
   gaps_path.touch(exist_ok=True)
   with gaps_path.open("a", encoding="utf-8") as f:
-    f.write(response.text.strip() + "\n")
+    f.write(f"file {args.input} | {model}\n {response.text.strip()} \n\n")
   print(f"✅ gaps saved to {gaps_path}")
 
 if __name__ == "__main__":
