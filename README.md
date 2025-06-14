@@ -38,11 +38,17 @@ Dependencies and versions
 
 First, check the [dependencies](#dependenciesandenvironment) process
 
+Feel free to change the prompt as you see fit in [`prompt.txt`](./prompt.txt)
+
 You can clean the environment using
 
 ```
 $ make clean
 ```
+
+Optional parameters
+
+**-m**: pass the llm model
 
 ### Gemini
 
