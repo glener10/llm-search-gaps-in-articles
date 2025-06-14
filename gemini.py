@@ -5,7 +5,9 @@ from google import genai
 from google.genai import types
 from dotenv import load_dotenv
 
-from common.args import get_input_from_args
+from common.args import get_args
+from common.prompt import read_prompt
+from common.output import persist_output
 
 DEFAULT_MODEL = "gemini-2.0-flash"
 
@@ -17,7 +19,7 @@ def get_api_key():
   return api_key
 
 def main():
-  args = get_input_from_args()
+  args = get_args()
   api_key = get_api_key()
 
   filepath = pathlib.Path(args.input)
@@ -25,10 +27,7 @@ def main():
   
   print(f"📄 processing file: {filepath} with model: {model} output path: {args.output}")
   
-  prompt_path = pathlib.Path("prompt.txt")
-  if not prompt_path.exists():
-    raise FileNotFoundError("❌ prompt.txt not found")
-  prompt = prompt_path.read_text(encoding="utf-8").strip()
+  prompt = read_prompt()
 
   client = genai.Client(api_key=api_key)
   response = client.models.generate_content(
@@ -40,11 +39,7 @@ def main():
         ),
         prompt])
   
-  gaps_path = pathlib.Path(args.output)
-  gaps_path.touch(exist_ok=True)
-  with gaps_path.open("a", encoding="utf-8") as f:
-    f.write(f"file {args.input} | {model}\n\n{response.text.strip()}\n--------------------------------------------------------------------------\n\n\n")
-  print(f"✅ gaps saved to {gaps_path}")
+  persist_output(args.output, args.input, model, response.text.strip())
 
 if __name__ == "__main__":
   start_time = datetime.datetime.now()
