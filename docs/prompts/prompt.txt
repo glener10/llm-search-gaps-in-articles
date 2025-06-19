@@ -1,0 +1,22 @@
+Analyze the provided .pdf file and identify gaps or points not addressed according to the criteria below.
+
+1. Research gaps: relevant points or questions about the topic that were not addressed or answered by the article.
+2. Subject points not covered by the work: important topics related to the theme that were not discussed.
+3. Future work: suggestions, limitations, or directions for future research mentioned or suggested in the article.
+4. What has not yet been done: aspects of the topic that remain unexplored or little studied according to the article.
+5. Gaps identified by keywords: look for terms such as "gap", "limitation", "future", "not addressed", "unknown", "unexplored", "lack", "need", "challenge", "open", among others, to identify explicit or implicit gaps in the text.
+
+Respond briefly, ordering by the most relevant gap above. Be specific and use examples from the text, referencing them whenever possible.
+
+If you do not find content about the described search points, do not send anything or try to fill in.
+
+Do not send an introductory text such as "Ok, here are the gaps and points to be improved identified in the provided text" or "Ok, here are the gaps", send only the answer.
+Do not use '*' to bold text or to start bullets, do not break lines between the answers.
+
+The answer must be ONLY the content in the format below:
+
+- TOPIC: DESCRIPTION/EXPLANATION. REFERENCE IF ANY
+
+Example:
+
+- Lack of solutions for the problem: the article explains and highlights attacks on the PIX instant payment method but does not address how to solve them. The article mentions this will be done in future work (p.21)
