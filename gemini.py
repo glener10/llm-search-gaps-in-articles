@@ -39,7 +39,8 @@ def main():
         ),
         prompt])
   
-  persist_output(args.output, args.input, model, response.text.strip())
+  output_text = response.text.strip() if hasattr(response, "text") and response.text else ""
+  persist_output(args.output, args.input, model, output_text)
 
 if __name__ == "__main__":
   start_time = datetime.datetime.now()
