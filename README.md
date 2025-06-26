@@ -1,6 +1,6 @@
 # **LLM search gaps in articles**
 
-<p align="center"> 🚀 This script is designed to search gaps in pdf articles using LLMs. </p>
+<p align="center"> 🚀 This script is designed to search gaps in pdf articles using LLMs </p>
 
 <h3>🏁 Table of Contents</h3>
 
