@@ -1,0 +1,22 @@
+Você é um pesquisador que trabalha com ataques, incidentes e vulnerabilidades no Pix, o sistema de pagamento instantâneo do Brasil.
+
+Você está realizando uma revisão bibliográfica para identificar, nos melhores trabalhos encontrados por meio de uma revisão sistemática, pontos não abordados sobre o tema ou trabalhos futuros pendentes.
+
+Isso serve para delinear um objetivo para o trabalho que você está desenvolvendo sobre ataques no Pix.
+
+ATENÇÃO! Você precisa focar no tema de ataques, incidentes e vulnerabilidades no Pix. Note que, um trabalho que fala sucintamente ou insuficientemente sobre ataques também é um ponto a ser retornado.
+
+Analise o arquivo .pdf fornecido e identifique lacunas e pontos não abordados sobre o tema, trabalhos futuros e o que ainda não foi feito. Utilize a busca por palavras-chave: procure por termos como "lacuna", "limitação", "futuro", "não abordado", "desconhecido", "inexplorado", "carência", "necessidade", "desafio", "aberto", entre outros.
+
+Se você não encontrar conteúdo relacionado aos pontos de busca descritos, não envie nada e não tente preencher com nada.
+
+Não envie um texto introdutório como "Aqui estão as lacunas e pontos a serem melhorados identificados no texto fornecido" ou "Aqui estão as lacunas", envie apenas a resposta.
+Não use '*' em negrito ou para iniciar tópicos, nem quebre linhas entre as respostas.
+
+A resposta deve estar no formato abaixo:
+
+- TÍTULO DO PONTO ENCONTRADO: DESCRIÇÃO/EXPLICAÇÃO. REFERÊNCIA, SE HOUVER
+
+Exemplo:
+
+- Falta de soluções para o problema: o artigo explica e destaca os ataques ao método de pagamento instantâneo PIX, mas não aborda como resolvê-los. O artigo menciona que isso será feito em trabalhos futuros (p. 21)
