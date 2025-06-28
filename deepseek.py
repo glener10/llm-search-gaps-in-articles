@@ -2,12 +2,13 @@ import datetime
 from openai import OpenAI
 import pathlib
 
-from common.args import get_args
+from src.utils.args import get_args
 
 def main():
   args = get_args()
 
   filepath = pathlib.Path(args.input)
+  print(filepath)
 
   client = OpenAI(
     base_url="http://localhost:11434/v1",

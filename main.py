@@ -5,9 +5,9 @@ from google import genai
 from google.genai import types
 from dotenv import load_dotenv
 
-from common.args import get_args
-from common.prompt import read_prompt
-from common.output import persist_output
+from src.utils.args import get_args
+from src.utils.prompt import read_prompt
+from src.utils.output import persist_output
 
 DEFAULT_MODEL = "gemini-2.0-flash"
 
