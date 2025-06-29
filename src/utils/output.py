@@ -9,4 +9,4 @@ def persist_output(path, input, model, response):
     f.write(
       "file " + input + " | " + model + "\n\n" + response + "\n" + separator + "\n\n\n"
     )
-  print(f"✅ gaps saved to {gaps_path}")
+  print(f"✅ gaps saved into {gaps_path}")
