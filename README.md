@@ -2,6 +2,10 @@
 
 <p align="center"> 🚀 This script is designed to search gaps in pdf articles using LLMs </p>
 
+Execution Example
+
+![execution example](docs/images/exec_example.png)
+
 <h3>🏁 Table of Contents</h3>
 
 <br>
