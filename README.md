@@ -48,26 +48,39 @@ You can clean the environment using
 $ make clean
 ```
 
-Optional parameters
-
-**-m**: pass the llm model
-
-**-o**: output path
-
-### Gemini
-
-to gemini exec:
+Check files format with
 
 ```
-$ make run-gemini INPUT=YOUR_INPUT_PATH
+$ make lint
 ```
 
-### DeepSeek
-
-to deepseek exec:
+Format files with
 
 ```
-$ make run-deep INPUT=YOUR_INPUT_PATH
+$ make format
+```
+
+Exec unit tests with
+
+```
+$ make test
+```
+
+to exec:
+
+```
+$ make run ARGS="-i \"INPUT PATH\""
+```
+
+Below are the arguments that can be used when running the script, with a brief explanation of each:
+
+- `-m`, `--model`: Set the model (default: **gemini-2.5-flash-preview-05-20**).
+- `-o`, `--output`: Output path (default: **gaps.txt**).
+
+Example executing with all arguments:
+
+```
+$ make run ARGS="-i \"INPUT PATH\" -m \"gemini-2.0-flash\" -o \"output.txt\""
 ```
 
 <div id="author"></div>
