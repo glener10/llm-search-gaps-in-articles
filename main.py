@@ -9,7 +9,7 @@ from src.utils.args import get_args
 from src.utils.prompt import read_prompt
 from src.utils.output import persist_output
 
-DEFAULT_MODEL = "gemini-2.0-flash"
+DEFAULT_MODEL = "gemini-2.5-flash-preview-05-20"
 
 def get_api_key():
   load_dotenv()
