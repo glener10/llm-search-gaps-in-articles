@@ -1,5 +1,6 @@
 import pathlib
 
+
 def read_prompt():
   prompt_path = pathlib.Path("prompt.txt")
   if not prompt_path.exists():
